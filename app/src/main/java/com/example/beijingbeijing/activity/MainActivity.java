@@ -1,7 +1,9 @@
-package com.example.beijingbeijing;
+package com.example.beijingbeijing.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.beijingbeijing.R;
 
 public class MainActivity extends AppCompatActivity {
 

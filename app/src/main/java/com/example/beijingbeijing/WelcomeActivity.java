@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
+
+import com.example.beijingbeijing.activity.GuideActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
     private RelativeLayout activity_welcome;
