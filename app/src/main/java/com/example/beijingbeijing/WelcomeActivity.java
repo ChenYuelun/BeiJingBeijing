@@ -11,6 +11,8 @@ import android.view.animation.ScaleAnimation;
 import android.widget.RelativeLayout;
 
 import com.example.beijingbeijing.activity.GuideActivity;
+import com.example.beijingbeijing.activity.MainActivity;
+import com.example.beijingbeijing.utils.CacheUtils;
 
 public class WelcomeActivity extends AppCompatActivity {
     private RelativeLayout activity_welcome;
@@ -50,8 +52,15 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(WelcomeActivity.this,GuideActivity.class));
-                finish();
+                boolean aBoolean = CacheUtils.getBoolean(WelcomeActivity.this, "start_main");
+                if(aBoolean) {
+                    startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                    finish();
+                }else {
+                    startActivity(new Intent(WelcomeActivity.this,GuideActivity.class));
+                    finish();
+                }
+
             }
 
             @Override
